@@ -20,3 +20,5 @@ Before you run the experiment for the first time, you have to create a monitor p
 
 2) Run monitor_setup.py
 
+To start the experiment, simply run run_experiment.py (don't forget to set up the parameters in constants.py first!)
+
