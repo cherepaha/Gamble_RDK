@@ -25,7 +25,7 @@ class HEMTrackerUI:
     gamble_button_size = (250, 60)
 
     def __init__(self):
-        self.disp = libscreen.Display(monitor = MONITOR)
+        self.disp = libscreen.Display(monitor=MONITOR)
         self.mouse = libinput.Mouse(visible=True)
         self.keyboard = libinput.Keyboard(keylist=['space', 'left', 'right', 'lctrl', 'rctrl'], 
                                           timeout=None)
