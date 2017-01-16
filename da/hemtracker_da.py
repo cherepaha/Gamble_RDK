@@ -71,6 +71,7 @@ class HEMTrackerDA:
             f = open(file_name, 'r')
         except IOError:
             with open(file_name, 'w') as f:
+                f.write('666\n')
     
         if SUBJ_ID is None:
             existing_subj_ids = np.loadtxt(file_name)
@@ -79,6 +80,7 @@ class HEMTrackerDA:
                 subj_id = int(random.uniform(ID_RANGE[0], ID_RANGE[1]))
     
             with open(file_name, 'ab+') as fp:
+                fp.write(str(subj_id)+'\n')
 #                writer = csv.writer(fp, delimiter = '\t')
 #                writer.writerow([str(subj_id)])
         else:
