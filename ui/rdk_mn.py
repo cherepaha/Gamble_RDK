@@ -21,7 +21,9 @@ class RDK_MN:
         # (a couple of extra dots won't be a problem)
         self.n_dots += (self.n_sequences - self.n_dots % self.n_sequences) % self.n_sequences
 
-        n_elements = self.n_dots/self.n_sequences
+        # even though n_dots is supposed to be divisible by n_sequences by this stage,
+        #  we explicitly cast this to integer to make this work under Python 3
+        n_elements = int(self.n_dots/self.n_sequences)
         if (n_elements * self.n_sequences != self.n_dots):
             raise ValueError('Check n_elements parameter provided to ElementArrayStim! ' 
                             'It should be equal to n_dots/self.n_sequences, where n_dots is '
